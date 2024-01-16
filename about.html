@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>About Us - Pakistan Tourism</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 0.6)), url(./Images/bg.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        nav{
+            display: flex;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.479);
+            justify-content: space-around;
+            align-items: center;
+            height: 68px;
+            overflow: hidden;
+            top: 0;
+                        
+        }
+        .logo{
+            display: flex;
+            color: white;
+            align-items: center;
+            
+        }
+        .logo img{
+            width: 50px;
+            height: 50px;
+        }
+        .log h1{
+            font-weight: 600;
+            font-size: 50px;
+        }
+        @media only screen and (max-width: 600px) {
+            .logo h1 {
+            font-weight: 300;
+            font-size: 20px;
+            }
+            .menu ul li {
+                font-size: 13px;
+                margin-left: 10px;
+            }
+            .me{
+                display: none;
+            }
+            
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu ul li{
+            display: inline-block;
+            /* align-content: center; */
+            margin-left: 30px;
+            font-size: 14px;
+            list-style: none;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .menu ul li a:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 1em;
+        }
+
+        .description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .option-item {
+            flex: 1 1 300px;
+            max-width: 300px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .option-item:hover {
+            transform: scale(1.05);
+        }
+
+        .option-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .option-item p {
+            padding: 1em;
+
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Images/plane3.png" alt="Logo is missing" width="100%" height="100%">
+            <h1>Pak Tourisam</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <span class="me"><li><a href="#" style="color: red;">About Us</a></li></span>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- <li><a href="#">Gallery</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <section class="description">
+        <p>Welcome to Pakistan Tourism, where your journey begins with the beauty of our rich culture, captivating landscapes, and warm hospitality.</p>
+    </section>
+
+    <section class="options">
+        <a href="contact.html">
+            <div class="option-item" onclick="showDetails('5-star')">
+                <img src="Images/5star.jpg" alt="5-Star Hotel">
+                <p>Luxury Hotel</p>
+            </div>
+        </a>    
+        <a href="contact.html">
+            <div class="option-item" onclick="showDetails('4-star')">
+                <img src="Images/4star.jpg" alt="4-Star Hotel">
+                <p>Hotels with beautiful view</p>
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="option-item" onclick="showDetails('3-star')">
+                <img src="Images/3star.jpg" alt="3-Star Hotel">
+                <p>VIP Facilities</p>
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="option-item" onclick="showDetails('couple-packages')">
+                <img src="Images/couple.jpg" alt="Couple Packages">
+                <p>Cherish special moments with our Couple Packages</p>
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="option-item" onclick="showDetails('ticket-facilities')">
+                <img src="Images/tickets.jpg" alt="Ticket Facilities">
+                <p>Book your tickets hassle-free with our Ticket Facilities</p>
+            </div>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pakistan Tourism</p>
+    </footer>
+
+   
+</body>
+</html>
